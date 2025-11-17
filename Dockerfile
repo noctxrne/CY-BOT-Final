@@ -16,8 +16,8 @@ COPY . .
 # Create uploads directory
 RUN mkdir -p uploads
 
-# Expose port 5000
-EXPOSE 5000
+#Cloud Run listens on PORT (8080)
+EXPOSE 8080
 
-# Run the application
-CMD ["gunicorn", "app:app"]
+# Start Gunicorn bound to Cloud Run port
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "app:app"]
