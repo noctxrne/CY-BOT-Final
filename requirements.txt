@@ -1,0 +1,31 @@
+# Core Flask
+Flask
+
+# LangChain Ecosystem
+langchain
+langchain-community
+langchain-huggingface  # This is important
+langchain-groq
+langchain-text-splitters
+langchain-core
+
+# ML & Data
+joblib
+numpy
+scikit-learn
+
+# Vector Store & Embeddings
+faiss-cpu
+sentence-transformers
+
+# PDF Processing
+PyMuPDF
+
+# Environment Variables
+python-dotenv
+
+# Hugging Face Hub
+huggingface_hub  # Add this line
+
+# WSGI Server (for production)
+gunicorn
