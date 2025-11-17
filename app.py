@@ -14,7 +14,7 @@ app.secret_key = "cyberlaw_secret"
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'pdf'}
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-DATABASE = 'chat_sessions.db'
+DATABASE = os.path.join("/tmp", "chat_sessions.db")
 
 # Create upload directory if it doesn't exist
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
@@ -24,7 +24,7 @@ def get_db_connection():
     conn = sqlite3.connect(DATABASE)
     conn.row_factory = sqlite3.Row
     return conn
-
+    
 # def init_db():
 #     if not os.path.exists(DATABASE):
 #         with closing(get_db_connection()) as db:
